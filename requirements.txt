@@ -1,2 +1,7 @@
-Flask==1.1.2
-gunicorn==20.0.4
+Flask
+Flask-RESTful
+gunicorn
+itsdangerous
+Jinja2
+peewee
+Werkzeug
