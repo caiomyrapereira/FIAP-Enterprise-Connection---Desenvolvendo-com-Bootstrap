@@ -42,7 +42,7 @@ button {
 }
 
 #btn-google {
-  background-image: url(../../images/icone_google.svg);
+  background-image: url(../../img/icone_google.svg);
   background-repeat: no-repeat;
   max-width: 500px;
   background-position: 10px 50%;
@@ -55,7 +55,7 @@ button {
 }
 
 #btn-facebook {
-  background-image: url(../../images/icone_facebook.svg);
+  background-image: url(../../img/icone_facebook.svg);
   background-repeat: no-repeat;
   max-width: 500px;
   background-position: 8px 50%;
