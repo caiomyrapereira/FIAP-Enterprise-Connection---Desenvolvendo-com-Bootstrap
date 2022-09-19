@@ -29,7 +29,7 @@ document.getElementById('destino-img').src = destino.imgDesc;
 document.getElementById('destinos_header').style.backgroundImage = `url('${destino.imgBack}')`;
 
 async function setClima(WOEID) {
-  const response = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=eeb69df6&woeid=${WOEID}`, {mode:'no-cors'});
+  const response = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=eeb69df6&woeid=${WOEID}`, {mode:'cors'});
   const clima = await response.json();
   const divClima = document.getElementById('clima');
   document.getElementById('destino').innerHTML = destino.name;
