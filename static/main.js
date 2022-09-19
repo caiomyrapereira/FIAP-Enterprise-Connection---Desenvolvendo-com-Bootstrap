@@ -32,7 +32,7 @@ function navToInicio(target) {
     links.forEach((l) => l.classList.remove('active'));
     target.classList.add('active');
   }
-  navigateTo('../static/views/inicio/inicio.html');
+  navigateTo('./static/views/inicio/inicio.html');
   title.text = 'Início | Gulliver Traveller';
 }
 function navToFazer(target) {
