@@ -32,35 +32,35 @@ function navToInicio(target) {
     links.forEach((l) => l.classList.remove('active'));
     target.classList.add('active');
   }
-  navigateTo('./views/inicio/inicio.html');
+  navigateTo('../static/views/inicio/inicio.html');
   title.text = 'Início | Gulliver Traveller';
 }
 function navToFazer(target) {
   links.forEach((l) => l.classList.remove('active'));
   target.classList.add('active');
-  navigateTo('./views/fazer/fazer.html');
+  navigateTo('./static/views/fazer/fazer.html');
   title.text = ' O que fazer | Gulliver Traveller';
 }
 function navToHospedagens(target) {
   links.forEach((l) => l.classList.remove('active'));
   target.classList.add('active');
-  navigateTo('./views/hospedagens/hospedagens.html');
+  navigateTo('./static/views/hospedagens/hospedagens.html');
   title.text = ' Hospedagens | Gulliver Traveller';
 }
 function navToRestaurantes(target) {
   links.forEach((l) => l.classList.remove('active'));
   target.classList.add('active');
-  navigateTo('./views/restaurantes/restaurantes.html');
+  navigateTo('./static/views/restaurantes/restaurantes.html');
   title.text = ' Restaurantes | Gulliver Traveller';
 }
 function navToLogin(target) {
   links.forEach((l) => l.classList.remove('active'));
   target.classList.add('active');
-  navigateTo('./views/login/login.html');
+  navigateTo('./static/views/login/login.html');
   title.text = ' Login | Gulliver Traveller';
 }
 function navToDestino(id) {
-  navigateTo('./views/destinos/destinos.html', id);
+  navigateTo('./static/views/destinos/destinos.html', id);
   title.text = ' Destinos | Gulliver Traveller';
 }
 
