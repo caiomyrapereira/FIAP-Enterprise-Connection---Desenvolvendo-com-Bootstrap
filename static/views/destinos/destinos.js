@@ -29,9 +29,9 @@ document.getElementById('destino-img').src = destino.imgDesc;
 document.getElementById('destinos_header').style.backgroundImage = `url('${destino.imgBack}')`;
 
 async function setClima(WOEID) {
+  console.log(WOEID);
   const response = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=eeb69df6&woeid=${WOEID}`, {
-    mode: 'no-cors',
-    method: "get",
+    mode: 'cors',
     headers: {
       "Content-Type": "application/json"
     },
