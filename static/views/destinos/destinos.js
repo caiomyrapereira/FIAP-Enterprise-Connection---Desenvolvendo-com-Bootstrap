@@ -30,26 +30,29 @@ document.getElementById('destinos_header').style.backgroundImage = `url('${desti
 
 async function setClima(WOEID) {
   console.log(WOEID);
-  const response = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=eeb69df6&woeid=${WOEID}`, {
+  fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=eeb69df6&woeid=${WOEID}`, {
     mode: 'cors',
     headers: {
       "Content-Type": "application/json"
     },
-  });
-const clima = await response;
-console.log(clima);
-const divClima = document.getElementById('clima');
-document.getElementById('destino').innerHTML = destino.name;
+  }).then(function(response) {
+    const clima = await response;
+    console.log(clima);
+    const divClima = document.getElementById('clima');
+    document.getElementById('destino').innerHTML = destino.name;
+    
+    clima.results.forecast.forEach((dia) => {
+      const div = document.createElement('div');
+      div.innerHTML = `
+          <h6 class="clima-date">${dia.date} ${dia.weekday}</h6>
+          <p>${dia.description}</p>
+          <p><span class="min">${dia.min}°</span> - <span class="max">${dia.max}°</span</p>
+        `;
+    
+      divClima.appendChild(div);
+  })
+ 
 
-clima.results.forecast.forEach((dia) => {
-  const div = document.createElement('div');
-  div.innerHTML = `
-      <h6 class="clima-date">${dia.date} ${dia.weekday}</h6>
-      <p>${dia.description}</p>
-      <p><span class="min">${dia.min}°</span> - <span class="max">${dia.max}°</span</p>
-    `;
-
-  divClima.appendChild(div);
 });
 }
 
