@@ -37,6 +37,7 @@ async function setClima(WOEID) {
     },
   });
 const clima = await response;
+console.log(clima);
 const divClima = document.getElementById('clima');
 document.getElementById('destino').innerHTML = destino.name;
 
