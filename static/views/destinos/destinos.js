@@ -30,7 +30,7 @@ document.getElementById('destinos_header').style.backgroundImage = `url('${desti
 
 async function setClima(WOEID) {
   const response = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=eeb69df6&woeid=${WOEID}`, {
-    mode: 'no-cors',
+    mode: 'cors',
     method: "get",
     headers: {
       "Content-Type": "application/json"
